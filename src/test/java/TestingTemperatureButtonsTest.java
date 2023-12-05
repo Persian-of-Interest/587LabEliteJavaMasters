@@ -6,24 +6,24 @@ public class TestingTemperatureButtonsTest {
     @Test
     public void testTemperatureChanges() {
         // Test the increase temperature functionality
-        assertEquals(25, increaseTemperature(20));
+        assertEquals(22, increaseTemperature(20));
 
         // Test the decrease temperature functionality
-        assertEquals(15, decreaseTemperature(20));
+        assertEquals(18, decreaseTemperature(20));
     }
 
     @Test
     public void testDecreaseTemperature() {
         // Test the decrease temperature functionality
         assertEquals(18, decreaseTemperature(20));
-        assertEquals(5, decreaseTemperature(10));
+        assertEquals(8, decreaseTemperature(10));
     }
 
     @Test
     public void testIncreaseTemperature() {
         // Test the increase temperature functionality
         assertEquals(22, increaseTemperature(20));
-        assertEquals(30, increaseTemperature(25));
+        assertEquals(30, increaseTemperature(28));
     }
 
     // Utility method to simulate the decrease temperature functionality
