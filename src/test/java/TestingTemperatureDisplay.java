@@ -26,7 +26,7 @@ public class TestingTemperatureDisplay {
     // Enumeration representing temperature units
     private enum Unit {
         CELSIUS("°C"), // Celsius
-        FAHRENHEIT("°F"); // Farenheit
+        FAHRENHEIT("°F"); // Fahrenheit
 
         // Symbol associated with the temperature unit
         private final String symbol;
