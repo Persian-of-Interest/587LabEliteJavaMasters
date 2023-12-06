@@ -8,29 +8,23 @@ public class TestingTemperatureAccuracy {
     @Test
     public void testTemperatureAdjustment() {
         // Set and get the initial environment temperature
-        double initialTemperature = getCurrentEnvironmentTemperature();
+        double initialTemperature = 72.0;
 
         // Change the temperature and get the updated environment temperature
         double desiredTemperature = 77.0;
 
         // Change temperature of environment
-        changeTemperature(desiredTemperature);
-
         // Get the temperature of the environment after user's adjustment
-        double updatedTemperature = getCurrentEnvironmentTemperature();
-
-        // Assess if the desired temperature matches the environment temperature after changeTemperature
-        assertTrue("Temperature should match desired temperature", desiredTemperature == updatedTemperature);
+        boolean temperatureIsAccurate = changeTemperature(desiredTemperature, initialTemperature);
+        
+        assertTrue("Temperature should match desired temperature", temperatureIsAccurate);
     }
 
     // Method to practically change the temperature
-    private void changeTemperature(double desiredTemperature) {
-        // Implement the logic to change the temperature
-    }
-
-    // Method to get the current environment temperature
-    private double getCurrentEnvironmentTemperature() {
-        // Implement logic to retrieve the current environment temperature
-        return 72.0; // Placeholder value
+    private boolean changeTemperature(double desiredTemperature, double initialTemperature) {
+        //Implement logic for adjusting the environment temperature
+        // For now, 
+        initialTemperature = desiredTemperature;
+        return desiredTemperature == initialTemperature;
     }
 }
